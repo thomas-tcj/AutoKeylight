@@ -1,7 +1,5 @@
 namespace App
 {
-    using Microsoft.FSharp.Control;
-    using Microsoft.FSharp.Core;
     using static Data.AutoKeylight;
     using static Data.KeylightApi;
 
@@ -53,7 +51,7 @@ namespace App
             Minimize();
         }
 
-        private static void trySwitchKeylight(bool on)
+        private static void TrySwitchKeylight(bool on)
         {
             if (instance == null) return;
             if (instance.tbKeylightIp.Text == "")
@@ -91,7 +89,7 @@ namespace App
                 instance.lbWebcamStatus.ForeColor = Color.Green;
             }));
 
-            trySwitchKeylight(true);
+            TrySwitchKeylight(true);
         }
 
         private static void OnCamDisable(object? sender, object _)
@@ -104,7 +102,7 @@ namespace App
                 instance.lbWebcamStatus.ForeColor = Color.Red;
             }));
 
-            trySwitchKeylight(false);
+            TrySwitchKeylight(false);
         }
 
         private void tbKeylightIp_TextChanged(object sender, EventArgs e)
@@ -112,6 +110,11 @@ namespace App
             Properties.Settings.Default["KeylightIp"] = tbKeylightIp.Text;
             Properties.Settings.Default.Save();
             lbError.Text = "";
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            notifyIcon.Visible = false;
         }
     }
 }
