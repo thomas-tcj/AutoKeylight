@@ -6,7 +6,7 @@ Automatically turn on/off your Elgato Keylight or Keylight air on webcam usage.
 * Enter the IP address of your keylight.
 
 # Finding your keylight IP
-As of yet I'm not convinced there is an easy method to find the IP of your keylight. Here are several things you could try. Note that currently the IP address is only validated when the state of the webcam changes, so keep that in mind when looking for the correct IP address.
+As of yet I'm not convinced there is an easy method to find the IP of your keylight. Here are several things you could try. **Note that currently the IP address is only validated when the state of the webcam changes, so keep that in mind when looking for the correct IP address.**
 
 ## Using ARP
 Using the windows command line, you can use the commmand `arp -a` to provide you with a list of known IP adresses in your network. One option is to try these devices one by one, however if there's a lot it might be worth looking into Nmap.
