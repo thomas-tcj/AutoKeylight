@@ -2,7 +2,7 @@
 Automatically turn on/off your Elgato Keylight or Keylight air on webcam usage.
 
 # Usage
-* Download the latest release [here] (https://github.com/Dynitios/AutoKeylight/releases).
+* Download the latest release [here](https://github.com/Dynitios/AutoKeylight/releases).
 * Enter the IP address of your keylight.
 
 # Finding your keylight IP
