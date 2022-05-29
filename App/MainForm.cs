@@ -22,16 +22,21 @@ namespace App
 
         private void Unminimize()
         {
-            WindowState = FormWindowState.Normal;
-            this.Focus();
+            Show();
+            Focus();
+            TopMost = true;
         }
 
         private void Minimize()
         {
-            if (WindowState != FormWindowState.Minimized)
+            TopMost = false;
+
+            if (WindowState == FormWindowState.Minimized)
             {
-                WindowState = FormWindowState.Minimized;
+                WindowState = FormWindowState.Normal;
             }
+
+            Hide();
         }
 
         private void NotifyIcon_Click(object sender, EventArgs e)
@@ -41,11 +46,7 @@ namespace App
 
         private void MainForm_Resize(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Minimized)
-            {
-                Minimize();
-            }
-            
+            Minimize();
         }
         private void MainForm_Deactivate(object sender, EventArgs e)
         {
