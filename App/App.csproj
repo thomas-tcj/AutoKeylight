@@ -7,10 +7,27 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>Resources\lightbulb-solid.ico</ApplicationIcon>
+    <Version>1.0.1</Version>
+    <PackageId>Dynition.AutoKeylight</PackageId>
+    <Authors>Dynition</Authors>
+    <Product>AutoKeylight</Product>
+    <Description>Automatically turn on/off your Elgato Keylight or Keylight air on webcam usage.</Description>
+    <PackageProjectUrl>https://github.com/Dynitios/AutoKeylight</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/Dynitios/AutoKeylight</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <SignAssembly>False</SignAssembly>
   </PropertyGroup>
 
   <ItemGroup>
     <Content Include="Resources\lightbulb-solid.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -31,5 +48,4 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-
 </Project>
