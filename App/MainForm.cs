@@ -11,7 +11,7 @@ namespace App
         public MainForm()
         {
             InitializeComponent();
-            Location = new Point(Screen.PrimaryScreen.WorkingArea.Width - this.Width, Screen.PrimaryScreen.WorkingArea.Height - this.Height);
+            Location = new Point(Screen.PrimaryScreen.WorkingArea.Width - this.Width - 450, Screen.PrimaryScreen.WorkingArea.Height - this.Height);
             autoKeylight = new AutoKeylight();
             autoKeylight.OnCamEnable += new EventHandler<object>(OnCamEnable);
             autoKeylight.OnCamDisable += new EventHandler<object>(OnCamDisable);
@@ -23,6 +23,7 @@ namespace App
         private void Unminimize()
         {
             WindowState = FormWindowState.Normal;
+            this.Focus();
         }
 
         private void Minimize()

@@ -6,7 +6,12 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Resources\lightbulb-solid.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\lightbulb-solid.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Data\Data.fsproj" />
