@@ -15,5 +15,7 @@ Using the windows command line, you can use the commmand `arp -a` to provide you
 Using the command `nmap -p 9123 (ip range)` you can find which IP addresses have port 9123 open, which is the port that the elgato keylight uses. This will considerably lower the amount of possible IP's you are dealing with.
 Example: `nmap -p 9123 192.168.178.*` will scan all ip adresses between `192.168.178.1` and `192.168.178.255`.
 
+You can download Nmap [here](https://nmap.org/download#windows).
+
 # Start on Windows start
 Currently there is no way to set the application to start with windows, however you can do this manually by placing `AutoKeylight.exe` in `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup`.
